@@ -1,0 +1,17 @@
+name: lab1
+
+topology:
+  nodes:
+    frr1:
+      kind: linux
+      image: quay.io/frrouting/frr:10.5.4
+      binds:
+        - /root/lab1/daemons:/etc/frr/daemons
+    frr2:
+      kind: linux
+      image: quay.io/frrouting/frr:10.5.4
+      binds:
+        - /root/lab1/daemons:/etc/frr/daemons
+
+  links:
+    - endpoints: ["frr1:eth1", "frr2:eth1"]
