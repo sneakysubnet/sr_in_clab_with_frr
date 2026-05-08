@@ -1,0 +1,62 @@
+name: lab2
+
+topology:
+  nodes:
+    frr1:
+      kind: linux
+      image: quay.io/frrouting/frr:10.5.4
+      binds:
+        - /root/lab2/daemons:/etc/frr/daemons
+        - /root/lab2/r1.cfg:/etc/frr/frr.conf
+      exec:
+        - sysctl -w net.mpls.conf.lo.input=1  
+        - sysctl -w net.mpls.conf.eth0.input=1
+        - sysctl -w net.mpls.conf.eth1.input=1
+        - sysctl -w net.mpls.conf.eth2.input=1
+        - sysctl -w net.mpls.conf.eth3.input=1
+        - sysctl -w net.mpls.platform_labels=1048575
+    frr2:
+      kind: linux
+      image: quay.io/frrouting/frr:10.5.4
+      binds:
+        - /root/lab2/daemons:/etc/frr/daemons
+        - /root/lab2/r2.cfg:/etc/frr/frr.conf
+      exec:
+        - sysctl -w net.mpls.conf.lo.input=1  
+        - sysctl -w net.mpls.conf.eth0.input=1
+        - sysctl -w net.mpls.conf.eth1.input=1
+        - sysctl -w net.mpls.conf.eth2.input=1
+        - sysctl -w net.mpls.conf.eth3.input=1
+        - sysctl -w net.mpls.platform_labels=1048575
+    frr3:
+      kind: linux
+      image: quay.io/frrouting/frr:10.5.4
+      binds:
+        - /root/lab2/daemons:/etc/frr/daemons
+        - /root/lab2/r3.cfg:/etc/frr/frr.conf
+      exec:
+        - sysctl -w net.mpls.conf.lo.input=1  
+        - sysctl -w net.mpls.conf.eth0.input=1
+        - sysctl -w net.mpls.conf.eth1.input=1
+        - sysctl -w net.mpls.conf.eth2.input=1
+        - sysctl -w net.mpls.conf.eth3.input=1
+        - sysctl -w net.mpls.platform_labels=1048575
+    frr4:
+      kind: linux
+      image: quay.io/frrouting/frr:10.5.4
+      binds:
+        - /root/lab2/daemons:/etc/frr/daemons
+        - /root/lab2/r4.cfg:/etc/frr/frr.conf
+      exec:
+        - sysctl -w net.mpls.conf.lo.input=1  
+        - sysctl -w net.mpls.conf.eth0.input=1
+        - sysctl -w net.mpls.conf.eth1.input=1
+        - sysctl -w net.mpls.conf.eth2.input=1
+        - sysctl -w net.mpls.conf.eth3.input=1
+        - sysctl -w net.mpls.platform_labels=1048575
+  links:
+    - endpoints: ["frr1:eth1", "frr2:eth1"]
+    - endpoints: ["frr1:eth2", "frr3:eth1"]
+    - endpoints: ["frr2:eth2", "frr4:eth1"]
+    - endpoints: ["frr3:eth2", "frr4:eth2"]
+    - endpoints: ["frr2:eth3", "frr3:eth3"]
