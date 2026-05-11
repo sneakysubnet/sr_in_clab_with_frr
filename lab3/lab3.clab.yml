@@ -1,0 +1,46 @@
+name: lab3
+
+topology:
+  defaults:
+    kind: linux
+    image: quay.io/frrouting/frr:10.5.4
+
+  nodes:
+    frr1:
+      binds:
+        - /root/lab3/daemons:/etc/frr/daemons
+        - /root/lab3/r1.cfg:/etc/frr/frr.conf
+        - /root/lab3/capture:/tmp/
+      exec: &common-exec
+        - sysctl -w net.mpls.conf.lo.input=1
+        - sysctl -w net.mpls.conf.eth0.input=1
+        - sysctl -w net.mpls.conf.eth1.input=1
+        - sysctl -w net.mpls.conf.eth2.input=1
+        - sysctl -w net.mpls.conf.eth3.input=1
+        - sysctl -w net.mpls.platform_labels=1048575
+
+    frr2:
+      binds:
+        - /root/lab3/daemons:/etc/frr/daemons
+        - /root/lab3/r2.cfg:/etc/frr/frr.conf
+        - /root/lab3/capture:/tmp/
+      exec: *common-exec
+
+    frr3:
+      binds:
+        - /root/lab3/daemons:/etc/frr/daemons
+        - /root/lab3/r3.cfg:/etc/frr/frr.conf
+        - /root/lab3/capture:/tmp/
+      exec: *common-exec
+
+    frr4:
+      binds:
+        - /root/lab3/daemons:/etc/frr/daemons
+        - /root/lab3/r4.cfg:/etc/frr/frr.conf
+        - /root/lab3/capture:/tmp/
+      exec: *common-exec
+  links:
+    - endpoints: ["frr1:eth1", "frr2:eth1"]
+    - endpoints: ["frr1:eth2", "frr3:eth1"]
+    - endpoints: ["frr2:eth2", "frr3:eth2"]
+    - endpoints: ["frr2:eth3", "frr4:eth1"]
