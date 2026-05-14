@@ -1,0 +1,79 @@
+name: lab5
+
+topology:
+  defaults:
+    kind: linux
+    image: quay.io/frrouting/frr:10.5.4
+
+  nodes:
+    frr1:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/r1.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: &common-exec
+        - sysctl -w net.mpls.conf.lo.input=1
+        - sysctl -w net.mpls.conf.eth0.input=1
+        - sysctl -w net.mpls.conf.eth1.input=1
+        - sysctl -w net.mpls.conf.eth2.input=1
+        - sysctl -w net.mpls.conf.eth3.input=1
+        - sysctl -w net.mpls.platform_labels=1048575
+    frr2:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/r2.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+    frr3:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/r3.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+    frr4:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/r4.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+    frr5:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/r5.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+    frr6:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/r6.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+    host1:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/h1.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+    host2:
+      binds:
+        - /root/lab5/daemons:/etc/frr/daemons
+        - /root/lab5/h2.cfg:/etc/frr/frr.conf
+        - /root/lab5/capture:/tmp/
+      exec: *common-exec
+
+
+  links:
+    - endpoints: ["frr1:eth1", "frr2:eth1"]
+    - endpoints: ["frr1:eth2", "frr3:eth1"]
+    - endpoints: ["frr1:eth3", "host1:eth1"]
+
+    - endpoints: ["frr2:eth2", "frr3:eth2"]
+    - endpoints: ["frr2:eth3", "frr4:eth3"]
+
+    - endpoints: ["frr3:eth3", "frr5:eth3"]
+
+    - endpoints: ["frr4:eth2", "frr5:eth2"]
+
+    - endpoints: ["frr6:eth1", "frr4:eth1"]
+    - endpoints: ["frr6:eth2", "frr5:eth1"]
+    - endpoints: ["frr6:eth3", "host2:eth1"]
