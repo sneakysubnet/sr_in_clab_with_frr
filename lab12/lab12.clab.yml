@@ -1,0 +1,77 @@
+name: lab12
+
+topology:
+  defaults:
+    kind: linux
+    image: quay.io/frrouting/frr:10.5.4
+
+  nodes:
+    frr1:
+      binds:
+        - /root/lab12/daemons:/etc/frr/daemons
+        - /root/lab12/r1.cfg:/etc/frr/frr.conf
+        - /root/lab12/capture:/tmp/
+      exec: &common-exec
+        - ip link add sr0 type dummy
+        - ip link set sr0 up
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.seg6_flowlabel=0
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=0
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=0
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=0
+        - sysctl -w net.ipv6.conf.eth3.seg6_enabled=0
+        - sysctl -w net.ipv6.conf.eth4.seg6_enabled=0
+        - sysctl -w net.ipv6.conf.lo.seg6_enabled=0
+        - sysctl -w net.vrf.strict_mode=1
+
+    frr2:
+      binds:
+        - /root/lab12/daemons:/etc/frr/daemons
+        - /root/lab12/r2.cfg:/etc/frr/frr.conf
+        - /root/lab12/capture:/tmp/
+      exec: *common-exec
+
+    frr3:
+      binds:
+        - /root/lab12/daemons:/etc/frr/daemons
+        - /root/lab12/r3.cfg:/etc/frr/frr.conf
+        - /root/lab12/capture:/tmp/
+      exec: *common-exec
+    frr4:
+      binds:
+        - /root/lab12/daemons:/etc/frr/daemons
+        - /root/lab12/r4.cfg:/etc/frr/frr.conf
+        - /root/lab12/capture:/tmp/
+      exec: *common-exec
+
+
+    host1:
+      binds:
+        - /root/lab12/daemons:/etc/frr/daemons
+        - /root/lab12/h1.cfg:/etc/frr/frr.conf
+        - /root/lab12/capture:/tmp/
+      exec: *common-exec
+    host2:
+      binds:
+        - /root/lab12/daemons:/etc/frr/daemons
+        - /root/lab12/h2.cfg:/etc/frr/frr.conf
+        - /root/lab12/capture:/tmp/
+      exec: *common-exec
+
+
+
+
+  links:
+    - endpoints: ["frr1:eth1", "frr2:eth1"]
+    - endpoints: ["frr1:eth2", "frr3:eth1"]
+    - endpoints: ["frr1:eth3", "host1:eth1"]
+
+
+    - endpoints: ["frr2:eth2", "frr3:eth2"]
+    - endpoints: ["frr2:eth3", "frr4:eth1"]
+
+    - endpoints: ["frr3:eth3", "frr4:eth2"]
+
+    - endpoints: ["frr4:eth3", "host2:eth1"]
+
+ 
