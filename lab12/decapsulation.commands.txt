@@ -1,0 +1,12 @@
+#End.DX4
+ip -6 r a fc00:1:: encap seg6local action End.DX4 nh4 10.100.100.100 dev eth3
+ip -6 r a fc00:4:: encap seg6local action End.DX4 nh4 10.200.200.100 dev eth3
+
+#Creating VRF for GRT table 254
+
+ip link add vrf-main type vrf table 254
+ip link set vrf-main up
+
+#End.DT4
+ip -6 r a fc00:1:: encap seg6local action End.DT4 vrftable 254 dev vrf-main
+ip -6 r a fc00:4:: encap seg6local action End.DT4 vrftable 254 dev vrf-main
