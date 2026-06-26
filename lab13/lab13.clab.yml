@@ -1,0 +1,84 @@
+name: lab13
+
+topology:
+  defaults:
+    kind: linux
+    image: quay.io/frrouting/frr:10.5.4
+
+  nodes:
+    frr1:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/r1.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: &common-exec
+        - ip link add sr0 type dummy
+        - ip link set sr0 up
+        - sysctl -w net.ipv6.conf.all.forwarding=1
+        - sysctl -w net.ipv6.conf.all.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth1.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth2.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth3.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.eth4.seg6_enabled=1
+        - sysctl -w net.ipv6.conf.lo.seg6_enabled=1
+        - sysctl -w net.vrf.strict_mode=1
+    frr2:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/r2.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+    frr3:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/r3.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+    frr4:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/r4.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+    frr5:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/r5.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+    frr6:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/r6.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+    host1:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/h1.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+    host2:
+      binds:
+        - /root/lab13/daemons:/etc/frr/daemons
+        - /root/lab13/h2.cfg:/etc/frr/frr.conf
+        - /root/lab13/capture:/tmp/
+      exec: *common-exec
+
+
+  links:
+    - endpoints: ["frr1:eth1", "frr2:eth1"]
+    - endpoints: ["frr1:eth2", "frr3:eth1"]
+    - endpoints: ["frr1:eth3", "host1:eth1"]
+
+    - endpoints: ["frr2:eth2", "frr3:eth2"]
+    - endpoints: ["frr2:eth3", "frr4:eth3"]
+
+    - endpoints: ["frr3:eth3", "frr5:eth3"]
+
+    - endpoints: ["frr4:eth2", "frr5:eth2"]
+
+    - endpoints: ["frr6:eth1", "frr4:eth1"]
+    - endpoints: ["frr6:eth2", "frr5:eth1"]
+    - endpoints: ["frr6:eth3", "host2:eth1"]
+     
