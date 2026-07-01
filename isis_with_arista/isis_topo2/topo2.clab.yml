@@ -1,0 +1,31 @@
+name: isis2
+
+topology:
+  kinds:
+    ceos:
+      image: ceos:4.36.0F 
+  nodes:
+    ceos1:
+      kind: ceos 
+    ceos2:
+      kind: ceos
+    ceos31:
+      kind: ceos 
+    ceos32:
+      kind: ceos 
+    ceos4:
+      kind: ceos
+    ceos5:
+      kind: ceos 
+    ceos6:
+      kind: ceos
+  links:
+    - endpoints: ["ceos1:eth1", "ceos31:eth1"]
+    - endpoints: ["ceos2:eth1", "ceos32:eth1"]
+
+    - endpoints: ["ceos31:eth3", "ceos4:eth3"]
+    - endpoints: ["ceos32:eth2", "ceos4:eth2"]
+
+    - endpoints: ["ceos4:eth1", "ceos5:eth1"]
+
+    - endpoints: ["ceos5:eth2", "ceos6:eth2"]

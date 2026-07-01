@@ -1,0 +1,23 @@
+name: isis45
+
+topology:
+  kinds:
+    ceos:
+      image: ceos:4.36.0F 
+  nodes:
+    ceos1:
+      kind: ceos 
+      binds:
+        - /root/isis_topo45/capture:/tmp
+    ceos2:
+      kind: ceos
+    ceos3:
+      kind: ceos
+    ceos4:
+      kind: ceos
+  links:
+    - endpoints: ["ceos1:eth1", "ceos3:eth1"]
+    - endpoints: ["ceos2:eth1", "ceos3:eth2"]
+
+    - endpoints: ["ceos3:eth3", "ceos4:eth3"]
+
