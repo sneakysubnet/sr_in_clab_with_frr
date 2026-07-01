@@ -12,8 +12,8 @@ This repository contains configuration files for [Segment Routing course availab
 | [Segment Routing Traffic Engineering for L3VPN](https://youtu.be/ytSvDRzFt6I)| [lab7](lab7/) |
 | [Segment Routing Re-Convergence](https://youtu.be/PNsWdoyizuI)| [lab8](lab8/) | 	
 | [Segment Routing with IS-IS. IS-IS Fundamental](https://youtu.be/ah7Y-isDsO4)| [lab9](lab9/) |  
-| [IS-IS Design, Routing and Path Selection](https://youtu.be/CBSNTVPBvZc) | no FRR lab, done with arista ceos  |	
-| [Understanding IS-IS internals](https://youtu.be/hqGbRN7MojU) | no FRR lab, done with arista ceos |	
+| [IS-IS Design, Routing and Path Selection](https://youtu.be/CBSNTVPBvZc) | [isis_with_arista](isis_with_arista/)  |	
+| [Understanding IS-IS internals](https://youtu.be/hqGbRN7MojU) | [isis_with_arista](isis_with_arista/) |	
 | [Segment Routing Flex Algo Flexible Algorithm) Fundamentals and Configuration](https://youtu.be/HGc-oJFXzWw)| [lab10](lab10/) |
 | [Segment Routing Flex Algo Details: Graph Trimming, Ext Admin Group, Packet Level Capture](https://youtu.be/OLCk4JB4CNc)| [lab10](lab10/) | 
 | [Segment Routing Flex Algo Failure and Trimming Scenarios](https://youtu.be/f82_LbH1Fbk)| [lab10](lab10/) | 	
