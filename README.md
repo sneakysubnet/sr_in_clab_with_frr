@@ -15,7 +15,7 @@ This repository contains configuration files for Segment Routing course availabl
 | [Understanding IS-IS internals](https://youtu.be/hqGbRN7MojU) | no FRR lab, done with arista ceos    0 |	
 | [Segment Routing Flex Algo Flexible Algorithm) Fundamentals and Configuration](https://youtu.be/HGc-oJFXzWw)| lab10 | ✅ |	
 | [Segment Routing Flex Algo Details: Graph Trimming, Ext Admin Group, Packet Level Capture](https://youtu.be/OLCk4JB4CNc)| lab10 | ✅ |	
-| [Segment Routing Flex Algo Failure and Trimming Scenarios                                 		(https://youtu.be/f82_LbH1Fbk)| lab10 | ✅ |	
+| [Segment Routing Flex Algo Failure and Trimming Scenarios](https://youtu.be/f82_LbH1Fbk)| lab10 | ✅ |	
 | [LFA and FRR. Loop Free Alternate and Fast Re-Route](https://youtu.be/nlXD8tK3Gw8)| lab10.5  | ✅	
 | [Segment Routing TI-LFA. Topology Independent Loop Free Alternate](https://youtu.be/IZ2aVywmnKQ)| lab10.5 | ✅ 	
 | [Segment Routing Anycast SID](https://youtu.be/PwWlP6aHYIE)| lab11 | ✅ |	
