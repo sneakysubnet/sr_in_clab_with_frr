@@ -18,5 +18,5 @@ This repository contains configuration files for Segment Routing course availabl
 | Segment Routing Flex Algo Failure and Trimming Scenarios| lab10 | ✅ |
 | LFA and FRR. Loop Free Alternate and Fast Re-Route | lab  |  |
 | Segment Routing TI-LFA. Topology Independent Loop Free Alternate | lab |  |
-| Segment Routing Anycast SIDe | lab | ✅ |
+| Segment Routing Anycast SIDe | lab11 | ✅ |
 
