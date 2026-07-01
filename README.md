@@ -9,7 +9,7 @@ This repository contains configuration files for Segment Routing course availabl
 | Segment Routing Traffic Engineering Policies and Binding SID | lab5 | ✅ |
 | Segment Routing with L3 VPN | lab6 | ✅ |
 | Segment Routing Traffic Engineering for L3VPN | lab7 | ✅ |
-| Segment Routing Re-Convergence | lab7 | ✅ |
+| Segment Routing Re-Convergence | lab8 | ✅ |
 | Segment Routing with IS-IS. IS-IS Fundamental | lab9 |
 | IS-IS Design, Routing and Path Selection |  |
 | Understanding IS-IS internals | lab |
