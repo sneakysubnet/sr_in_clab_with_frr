@@ -17,8 +17,8 @@ This repository contains configuration files for [Segment Routing course availab
 | [Segment Routing Flex Algo Flexible Algorithm) Fundamentals and Configuration](https://youtu.be/HGc-oJFXzWw)| [lab10](lab10/) |
 | [Segment Routing Flex Algo Details: Graph Trimming, Ext Admin Group, Packet Level Capture](https://youtu.be/OLCk4JB4CNc)| [lab10](lab10/) | 
 | [Segment Routing Flex Algo Failure and Trimming Scenarios](https://youtu.be/f82_LbH1Fbk)| [lab10](lab10/) | 	
-| [LFA and FRR. Loop Free Alternate and Fast Re-Route](https://youtu.be/nlXD8tK3Gw8)| [lab10](lab10\.5/)  |	
-| [Segment Routing TI-LFA. Topology Independent Loop Free Alternate](https://youtu.be/IZ2aVywmnKQ)| [lab10](lab10\.5/) | 	
+| [LFA and FRR. Loop Free Alternate and Fast Re-Route](https://youtu.be/nlXD8tK3Gw8)| [lab10](lab105/)  |	
+| [Segment Routing TI-LFA. Topology Independent Loop Free Alternate](https://youtu.be/IZ2aVywmnKQ)| [lab10](lab105/) | 	
 | [Segment Routing Anycast SID](https://youtu.be/PwWlP6aHYIE)| [lab11](lab11/) | 
 | [SRv6 Segment Routing over IPv6. IPv6 Fundamentals](https://youtu.be/0etGNLRFW2Q)| [lab12](lab12/) | 	
 | [SRv6 Deep Dive. Fundamentals, Forwarding Logic, Config and Packet Walk](https://youtu.be/h4R0c3GTa6E)| [lab12](lab12/) | 
