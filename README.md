@@ -20,3 +20,9 @@ This repository contains configuration files for Segment Routing course availabl
 | Segment Routing TI-LFA. Topology Independent Loop Free Alternate | lab |  |
 | Segment Routing Anycast SIDe | lab11 | ✅ |
 
+| SRv6 Segment Routing over IPv6. IPv6 Fundamentals | lab12 | ✅ |
+| SRv6 Deep Dive. Fundamentals, Forwarding Logic, Config and Packet Walk | lab12 | ✅  |
+| Understanding SRv6: Architecture, Standards, RFCs and Key Concepts | lab12 | ✅  |
+| SRv6 TE with End.X function and native IPv6 transit | lab13 | ✅  |
+| L3VPN with SRv6| lab14 |✅|
+| SRv6 uSID (micro SID | compressed SID) Deep Dive | lab15 |✅  |
