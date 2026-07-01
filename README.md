@@ -16,8 +16,8 @@ This repository contains configuration files for Segment Routing course availabl
 | Segment Routing Flex Algo (Flexible Algorithm) Fundamentals and Configuration | lab10 | ✅ |
 | Segment Routing Flex Algo Details: Graph Trimming, Ext Admin Group, Packet Level Capture | lab10 | ✅ |
 | Segment Routing Flex Algo Failure and Trimming Scenarios| lab10 | ✅ |
-| LFA and FRR. Loop Free Alternate and Fast Re-Route | lab  |  |
-| Segment Routing TI-LFA. Topology Independent Loop Free Alternate | lab |  |
+| LFA and FRR. Loop Free Alternate and Fast Re-Route | lab10.5  | ✅ |
+| Segment Routing TI-LFA. Topology Independent Loop Free Alternate | lab10.5 | ✅ |
 | Segment Routing Anycast SIDe | lab11 | ✅ |
 
 | SRv6 Segment Routing over IPv6. IPv6 Fundamentals | lab12 | ✅ |
