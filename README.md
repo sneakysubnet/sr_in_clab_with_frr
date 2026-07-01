@@ -23,7 +23,7 @@ This repository contains configuration files for Segment Routing course availabl
 | [SRv6 Deep Dive. Fundamentals, Forwarding Logic, Config and Packet Walk](https://youtu.be/h4R0c3GTa6E)| lab12 | ✅  |	
 | [Understanding SRv6: Architecture, Standards, RFCs and Key Concepts](https://youtu.be/GMOPudESczQ)| lab12 | ✅  |	
 | [SRv6 TE with End.X function and native IPv6 transit](https://youtu.be/ZFGT21AwTps)| lab13 | ✅  |	
-| [L3VPN with SRv6| 		        (https://youtu.be/BRwM76Nbh3I)    | lab14 |  ✅|	
+| [L3VPN with SRv6](https://youtu.be/BRwM76Nbh3I)    | lab14 |  ✅|	
 | [SRv6 uSID micro SID  compressed SID) Deep Dive](https://youtu.be/uuWUJfRjE88)| lab15 |✅  |	
 
 
