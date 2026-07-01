@@ -27,7 +27,7 @@ This repository contains configuration files for Segment Routing course availabl
 | SRv6 uSID (micro SID  compressed SID) Deep Dive | lab15 |✅  |
 
 
-|[SR-MPLS on Linux with FRR and OSPF](https://youtu.be/N-U2w6OUQWI)|lab2 | ✅ |	
+[SR-MPLS on Linux with FRR and OSPF](https://youtu.be/N-U2w6OUQWI)
 | [OSPF LSAs and RFCs for Segment Routing](https://youtu.be/EOBxBneHcno)| lab3 | ✅ |	
 | [Segment Routing Traffic Engineering](https://youtu.be/tqoYtsOvEQI)| lab4 | ✅ |	
 | [Segment Routing Traffic Engineering Policies and Binding SID](https://youtu.be/kQtEUEXiaEE)| lab5 | ✅ |	
