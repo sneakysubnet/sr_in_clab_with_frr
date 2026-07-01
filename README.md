@@ -10,9 +10,9 @@ This repository contains configuration files for Segment Routing course availabl
 | Segment Routing with L3 VPN | lab6 | ✅ |
 | Segment Routing Traffic Engineering for L3VPN | lab7 | ✅ |
 | Segment Routing Re-Convergence | lab8 | ✅ |
-| Segment Routing with IS-IS. IS-IS Fundamental | lab9 |
-| IS-IS Design, Routing and Path Selection |  |
-| Understanding IS-IS internals | lab |
+| Segment Routing with IS-IS. IS-IS Fundamental | lab9 |  ✅ |
+| IS-IS Design, Routing and Path Selection | no FRR lab, done with arista ceos  |
+| Understanding IS-IS internals | no FRR lab, done with arista ceos  |
 | Segment Routing Flex Algo (Flexible Algorithm) Fundamentals and Configuration | lab10 |
 | Segment Routing Flex Algo Details: Graph Trimming, Ext Admin Group, Packet Level Capture | lab10 |
 | Segment Routing Flex Algo Failure and Trimming Scenarios| lab10 |
