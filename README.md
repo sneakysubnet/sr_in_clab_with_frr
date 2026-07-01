@@ -25,9 +25,8 @@ This repository contains configuration files for Segment Routing course availabl
 | SRv6 TE with End.X function and native IPv6 transit | lab13 | ✅  |
 | L3VPN with SRv6| lab14 |✅|
 | SRv6 uSID (micro SID  compressed SID) Deep Dive | lab15 |✅  |
-
-
 |[SR-MPLS on Linux with FRR and OSPF](https://youtu.be/N-U2w6OUQWI)|lab1|123|
+
 | [OSPF LSAs and RFCs for Segment Routing](https://youtu.be/EOBxBneHcno)| lab3 | ✅ |	
 | [Segment Routing Traffic Engineering](https://youtu.be/tqoYtsOvEQI)| lab4 | ✅ |	
 | [Segment Routing Traffic Engineering Policies and Binding SID](https://youtu.be/kQtEUEXiaEE)| lab5 | ✅ |	
