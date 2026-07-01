@@ -3,7 +3,7 @@ This repository contains configuration files for [Segment Routing course availab
 | Video   | Lab ID |
 |---------|-----------|
 | [Segment Routing Fundamentals](https://youtu.be/xS_uOJxBvgI) | no lab | 
-| [Home Lab for Segment Routing](https://youtu.be/GPTvsh2Cvw4) | lab1 |
+| [Home Lab for Segment Routing](https://youtu.be/GPTvsh2Cvw4) | [lab1](lab1/) |
 | [SR-MPLS on Linux with FRR and OSPF](https://youtu.be/N-U2w6OUQWI)| lab2 | 	
 | [OSPF LSAs and RFCs for Segment Routing](https://youtu.be/EOBxBneHcno)| lab3 |	
 | [Segment Routing Traffic Engineering](https://youtu.be/tqoYtsOvEQI)| lab4 | 
