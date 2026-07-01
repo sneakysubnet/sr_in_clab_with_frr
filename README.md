@@ -1,8 +1,8 @@
 This repository contains configuration files for Segment Routing course available here https://www.youtube.com/playlist?list=PLto9y93q2lqhU5p3_erS_tB1y-uN7OTI1
 
-| Video   | Corresponding lab |
-|---------|-----------|
-| Home Lab for Segment Routing | lab1 | ✅
+| Video   | Corresponding lab | 1 |
+|---------|-----------|-------|
+| Home Lab for Segment Routing | lab1 | ✅ |
 | SR-MPLS on Linux with FRR and OSPF | lab2 |
 | OSPF LSAs and RFCs for Segment Routing | lab3 |
 | Segment Routing Traffic Engineering | lab4 |
